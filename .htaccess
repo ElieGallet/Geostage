@@ -1,0 +1,7 @@
+<Files ~ "^.*\.([Ll][Oo][Gg]|[cC][oO][mM][mM][eE][nN][tT])">
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
+
+Options -Indexes
