@@ -1,18 +1,18 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-admin.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-admin.php');?>
 
 <!doctype html>
 <html>
 <head>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-head.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-head.php');?>
 	
 </head>
 <body>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies.php');?>
 	<?php require ('create-post.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/pstage-data-upload/pstage-data-upload.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/pstage-data-upload/pstage-data-upload.php');?>
 
 	<div class="container">
 		<div class="well well-sm">
@@ -133,7 +133,7 @@
 		</form>
 	</div>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-scripts.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-scripts.php');?>
 	<script src="create.js"></script>
 
 </body>

@@ -23,7 +23,7 @@ function jsonRemoveUnicodeSequences($struct){
 }
 
 /* Open JSON file and fetch its contents */
-$fileJSON = $_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/json/company.json';
+$fileJSON = $_SERVER['DOCUMENT_ROOT'] . '/data-access/json/company.json';
 $file = fopen($fileJSON, 'r');
 $contentFile = fgets($file);
 fclose ($file);
@@ -96,9 +96,9 @@ foreach($decoded as $doc){
 
 $renvoi['company'] = $sauvegardeResultats;
 
-$fileGeoJSON = $_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/json/company.geojson';
+$fileGeoJSON = $_SERVER['DOCUMENT_ROOT'] . '/data-access/json/company.geojson';
 file_put_contents($fileGeoJSON, jsonRemoveUnicodeSequences($renvoi));
 
-require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/create-map-geojson.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/create-map-geojson.php');
 
 ?>

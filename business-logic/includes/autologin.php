@@ -7,15 +7,15 @@ if (isset($_COOKIE['auth'])){
 		$username = $user['username'];
 		$usertype = $business->getUserType($username);
 		if ($usertype == 'student'){
-			header('Location: /PIFE/user-interface/states/root.student/student.php');
+			header('Location: /user-interface/states/root.student/student.php');
 			exit();
 		}
 		else if ($usertype == 'company'){
-			header('Location: /PIFE/user-interface/states/root.company/company.php?company='.$username);
+			header('Location: /user-interface/states/root.company/company.php?company='.$username);
 			exit();
 		}
 		else if ($usertype == 'admin'){
-			header('Location: /PIFE/user-interface/states/root.admin.companies.list/list.php');
+			header('Location: /user-interface/states/root.admin.companies.list/list.php');
 			exit();
 		}
 	}

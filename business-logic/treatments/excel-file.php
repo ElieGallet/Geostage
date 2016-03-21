@@ -1,8 +1,8 @@
 <?php
 set_include_path(get_include_path().PATH_SEPARATOR.'Classes/');
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/libraries/PHPExcel.php');
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/libraries/PHPExcel/IOFactory.php');
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/business.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/libraries/PHPExcel.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/libraries/PHPExcel/IOFactory.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/business.php');
 
 class excelFileTreatment{
 

@@ -27,8 +27,8 @@
 		foreach ($offers as $value){
 			if(isset($_GET['id'])){
 				echo('<div class="btn-group" role="group" aria-label="...">
-					<button class="btn btn-default"><a href="/PIFE/data-access/offers/' . $_GET['id'] . '/' . $value['file_name'] . '">' . $value['file_name'] . '</a></button>
-					<button class="btn btn-danger"><a href="/PIFE/business-logic/services/delete-offer.php?filename=' . $value['file_name'] . '&idcompany=' . $_GET['id'] . '">delete</a></button>
+					<button class="btn btn-default"><a href="/data-access/offers/' . $_GET['id'] . '/' . $value['file_name'] . '">' . $value['file_name'] . '</a></button>
+					<button class="btn btn-danger"><a href="/business-logic/services/delete-offer.php?filename=' . $value['file_name'] . '&idcompany=' . $_GET['id'] . '">delete</a></button>
 					</div>
 					<br/>'
 					);
@@ -36,8 +36,8 @@
 			else{
 				echo('
 					<div class="btn-group" role="group" aria-label="...">
-					<button class="btn btn-default"><a href="/PIFE/data-access/offers/' . $info['id_user'] . '/' . $value['file_name'] . '">' . $value['file_name'] . '</a></button>
-					<button class="btn btn-danger"><a href="/PIFE/business-logic/services/delete-offer.php?filename=' . $value['file_name'] . '&idcompany=' . $info['id_user'] . '">delete</a></button>
+					<button class="btn btn-default"><a href="/data-access/offers/' . $info['id_user'] . '/' . $value['file_name'] . '">' . $value['file_name'] . '</a></button>
+					<button class="btn btn-danger"><a href="/business-logic/services/delete-offer.php?filename=' . $value['file_name'] . '&idcompany=' . $info['id_user'] . '">delete</a></button>
 					</div>
 					<br/>'
 					);

@@ -1,5 +1,5 @@
 <?php
-require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/libraries/PHPMailer/PHPMailerAutoload.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/libraries/PHPMailer/PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
 

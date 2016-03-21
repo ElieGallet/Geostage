@@ -1,6 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');
-require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/autologin.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/autologin.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/autologin.php
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Geostage</title>
-	<link rel="stylesheet" href="/PIFE/user-interface/vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/user-interface/vendors/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="login.css">
 </head>
 
@@ -38,8 +38,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/autologin.php
 		</form>
 	</div>
 
-	<script src="/PIFE/user-interface/vendors/jquery/dist/jquery.min.js"></script>
-	<script src="/PIFE/user-interface/vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/user-interface/vendors/jquery/dist/jquery.min.js"></script>
+	<script src="/user-interface/vendors/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

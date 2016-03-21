@@ -43,7 +43,7 @@ if(isset($_POST['importPDF'])){
 			$fileName = str_replace("'", "''", $fileName);
 			$fileName = str_replace("é", "e", $fileName);
 			$fileName = str_replace(" ", "", $fileName);
-			$path = $_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/offers/'. $id . '/';
+			$path = $_SERVER['DOCUMENT_ROOT'] . '/data-access/offers/'. $id . '/';
 			if(!is_dir($path)){
 				mkdir($path);
 			}

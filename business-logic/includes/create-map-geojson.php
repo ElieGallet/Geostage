@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-admin.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-admin.php');?>
 
 <?php
 setlocale(LC_ALL, 'fr', 'fr_FR', 'fr_FR.UTF-8');
@@ -13,7 +13,7 @@ function file_get_contents_utf8($fn) {
 }
 
 /* Opening GeoJSON file */
-$fileGeoJSON = $_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/json/company.geojson';
+$fileGeoJSON = $_SERVER['DOCUMENT_ROOT'] . '/data-access/json/company.geojson';
 $file = fopen($fileGeoJSON, 'r');
 $contentFile = fgets($file);
 fclose ($file);
@@ -56,6 +56,6 @@ foreach ($decoded['company'] as $company) {
 	}
 }
 
-$fileMap = $_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/json/map.geojson';
+$fileMap = $_SERVER['DOCUMENT_ROOT'] . '/data-access/json/map.geojson';
 file_put_contents($fileMap, json_encode($sauvegardeResultats));
 ?>

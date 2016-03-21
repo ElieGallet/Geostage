@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/data-access/database/database-connection.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/data-access/database/database-connection.php');
 require_once('treatments/excel-file.php');
 
 class business{

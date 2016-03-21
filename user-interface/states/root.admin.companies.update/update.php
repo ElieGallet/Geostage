@@ -1,20 +1,20 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-admin.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-admin.php');?>
 
 <!doctype html>
 <html>
 <head>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-head.php');?>
-	<link rel="stylesheet" href="/PIFE/user-interface/vendors/bootstrap-validator/dist/css/bootstrapValidator.min.css">
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-head.php');?>
+	<link rel="stylesheet" href="/user-interface/vendors/bootstrap-validator/dist/css/bootstrapValidator.min.css">
 
 </head>
 <body>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies.php');?>
 	<?php require('update-post.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/offer-upload/offer-upload.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/offer-download/offer-download.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/offer-upload/offer-upload.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/offer-download/offer-download.php');?>
 
 
 	<?php
@@ -155,8 +155,8 @@
 		</form>
 	</div>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-scripts.php');?>
-	<script src="/PIFE/user-interface/vendors/bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-scripts.php');?>
+	<script src="/user-interface/vendors/bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
 	<script src="update.js"></script>
 
 </body>

@@ -1,5 +1,5 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-student.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-student.php');?>
 
 <!DOCTYPE html>
 <html>
@@ -94,7 +94,7 @@ var layers;
 // Since featureLayer is an asynchronous method, we use the `.on('ready'`
 // call to only use its marker data once we know it is actually loaded.
 L.mapbox.featureLayer()
-    .loadURL('/PIFE/data-access/json/map.geojson')
+    .loadURL('/data-access/json/map.geojson')
     .on('ready', function(e) {
         layers = e.target;
         showStations();
@@ -148,7 +148,7 @@ function showStations() {
 
           for (var j = 0; j < layer.feature.properties.offers.length; j++) {
             popup = popup
-              + '<br/><a href="/PIFE/data-access/offers/'
+              + '<br/><a href="/data-access/offers/'
               + layer.feature.properties.id
               + '/'
               + layer.feature.properties.offers[j]

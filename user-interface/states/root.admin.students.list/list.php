@@ -1,17 +1,17 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-admin.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-admin.php');?>
 
 <!doctype html>
 <html>
 <head>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.students/students-head.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.students/students-head.php');?>
 	<link rel="stylesheet" href="./../../vendors/bootstrap-table/dist/bootstrap-table.min.css">
 	
 </head>
 <body>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.students/students.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.students/students.php');?>
 
 	<div class="container">
 		<div id="sectionTitle" class="well well-sm"><label>Student list</label></div>
@@ -44,7 +44,7 @@
 		</table>
 	</div>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.students/students-scripts.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.students/students-scripts.php');?>
 	
 	<script src="list.js"></script>
 

@@ -7,7 +7,7 @@ selections = [];
 
 function initTable(){
 	$.post( 
-		"/PIFE/business-logic/services/generate-student-json.php"
+		"/business-logic/services/generate-student-json.php"
 		)
 	.done(
 		function(data) {
@@ -89,7 +89,7 @@ function initTable(){
 				values: [id]
 			});
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "/PIFE/business-logic/services/deleteStudent.php?id="+id, true);
+			xhr.open("GET", "/business-logic/services/deleteStudent.php?id="+id, true);
 			xhr.send(null);
 		});
 		$("#myModal2").modal("hide");
@@ -126,7 +126,7 @@ function detailFormatter(index, row) {
 
 function operateFormatter(value, row, index) {
 	return [
-	'<a class="modify" href="/PIFE/user-interface/states/root.admin.students.update/update.php?id='+ row.id +'" title="Modify">',
+	'<a class="modify" href="/user-interface/states/root.admin.students.update/update.php?id='+ row.id +'" title="Modify">',
 	'<i class="glyphicon glyphicon-pencil"></i>',
 	'</a>    ',
 	'<a class="remove" href="javascript:void(0)" data-toggle="modal" title="Remove">',
@@ -167,7 +167,7 @@ window.operateEvents = {
 					values: [row.id]
 				});
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "/PIFE/business-logic/services/deleteStudent.php?id="+row.id, true);
+				xhr.open("GET", "/business-logic/services/deleteStudent.php?id="+row.id, true);
 				xhr.send(null);
 				$("#myModal").modal("hide");
 				$('body').removeClass('modal-open');
@@ -199,7 +199,7 @@ function getHeight() {
 
 $(function () {
 	var scripts = [
-	location.search.substring(1) || '/PIFE/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js'
+	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js'
 	],
 	eachSeries = function (arr, iterator, callback) {
 		callback = callback || function () {};

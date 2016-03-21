@@ -7,7 +7,7 @@ selections = [];
 
 function initTable(){
 	$.post( 
-		"/PIFE/business-logic/services/generate-company-json.php"
+		"/business-logic/services/generate-company-json.php"
 		)
 	.done(
 		function(data) {
@@ -106,7 +106,7 @@ $detail.html(res.replace(/\n/g, '<br>'));
 			});
 
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "/PIFE/business-logic/services/delete-company.php?id="+id, true);
+			xhr.open("GET", "/business-logic/services/delete-company.php?id="+id, true);
 			xhr.send(null);
 
 		});
@@ -212,7 +212,7 @@ window.operateEvents = {
 				console.log(content);
 				var receiver = row.email;
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "/PIFE/business-logic/services/email.php?receiver="+receiver+"&content="+content, true);
+				xhr.open("GET", "/business-logic/services/email.php?receiver="+receiver+"&content="+content, true);
 				xhr.send(null);
 				$("#myModalSender"+row.id).modal("hide");
 				$('body').removeClass('modal-open');
@@ -229,7 +229,7 @@ window.operateEvents = {
 					values: [row.id]
 				});
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "/PIFE/business-logic/services/delete-company.php?id="+row.id, true);
+				xhr.open("GET", "/business-logic/services/delete-company.php?id="+row.id, true);
 				xhr.send(null);
 				$("#myModal").modal("hide");
 				$('body').removeClass('modal-open');
@@ -261,7 +261,7 @@ function getHeight() {
 
 $(function () {
 	var scripts = [
-	location.search.substring(1) || '/PIFE/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js', '/PIFE/user-interface/vendors/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.js'
+	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js', '/user-interface/vendors/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.js'
 	],
 	eachSeries = function (arr, iterator, callback) {
 		callback = callback || function () {};

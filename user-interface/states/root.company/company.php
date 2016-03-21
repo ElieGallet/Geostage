@@ -1,21 +1,21 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-company.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-company.php');?>
 
 <!doctype html>
 <html>
 <head>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root/root-head.php');?>
-	<link rel="stylesheet" href="/PIFE/user-interface/vendors/bootstrap-validator/dist/css/bootstrapValidator.min.css">
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root/root-head.php');?>
+	<link rel="stylesheet" href="/user-interface/vendors/bootstrap-validator/dist/css/bootstrapValidator.min.css">
 
 </head>
 <body>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root/root.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/company-navbar/company-navbar.html');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root/root.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/company-navbar/company-navbar.html');?>
 	<?php require('company-post.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/offer-upload/offer-upload.php');?>
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/components/offer-download/offer-download.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/offer-upload/offer-upload.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/offer-download/offer-download.php');?>
 
 	<?php
 	$user = $business->getUser($info['id_user']);
@@ -210,8 +210,8 @@
 				</form>      
 			</div>
 
-			<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root/root-scripts.php');?>
-			<script src="/PIFE/user-interface/vendors/bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
+			<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root/root-scripts.php');?>
+			<script src="/user-interface/vendors/bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
 
 		</body>
 		</html>

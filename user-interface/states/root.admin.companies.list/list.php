@@ -1,17 +1,17 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/init.php');?>
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/business-logic/includes/auth-admin.php');?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/init.php');?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/business-logic/includes/auth-admin.php');?>
 
 <!doctype html>
 <html>
 <head>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-head.php');?>
-	<link rel="stylesheet" href="/PIFE/user-interface/vendors/bootstrap-table/dist/bootstrap-table.min.css">
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-head.php');?>
+	<link rel="stylesheet" href="/user-interface/vendors/bootstrap-table/dist/bootstrap-table.min.css">
 
 </head>
 <body>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies.php');?>
 
 	<div class="container">
 		<div id="sectionTitle" class="well well-sm"><label>Company list</label></div>
@@ -45,7 +45,7 @@
 
 	</div>
 
-	<?php require($_SERVER['DOCUMENT_ROOT'] . '/PIFE/user-interface/states/root.admin.companies/companies-scripts.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.companies/companies-scripts.php');?>
 	<script src="list.js"></script>
 		
 </body>

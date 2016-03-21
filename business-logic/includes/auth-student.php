@@ -10,19 +10,19 @@ if(isset($_COOKIE['auth'])){
 		}
 		else{
 			echo '<script>console.log("not authorized");</script>';
-			header('Location: /PIFE/user-interface/states/login/login.php');
+			header('Location: /user-interface/states/login/login.php');
 			exit();
 		}
 	}
 	else{
 		echo '<script>console.log("wrong token");</script>';
-		header('Location: /PIFE/user-interface/states/login/login.php');
+		header('Location: /user-interface/states/login/login.php');
 		exit();
 	}
 }
 else{
 	echo '<script>console.log("no token found");</script>';
-	header('Location: /PIFE/user-interface/states/login/login.php');
+	header('Location: /user-interface/states/login/login.php');
 	exit();
 }
 ?>
