@@ -28,6 +28,21 @@
 				<input type="text" id="inputLastname" name="lastname" class="form-control" placeholder="last name" required autofocus>
 			</div>
 
+			<label for="inputGraduatingYear" class="col-sm-2 control-label">Graduating Year</label>
+			<div class="col-sm-10 form-group">
+				<input type="text" id="inputGraduatingYear" name="graduatingyear" class="form-control" placeholder="graduating year" autofocus>
+			</div>
+
+			<label for="inputCourse" class="col-sm-2 control-label">Course</label>
+			<div class="col-sm-10 form-group">
+				<input type="text" id="inputCourse" name="course" class="form-control" placeholder="course" autofocus>
+			</div>
+
+			<label for="inputDiploma" class="col-sm-2 control-label">Diploma</label>
+			<div class="col-sm-10 form-group">
+				<input type="text" id="inputDiploma" name="diploma" class="form-control" placeholder="diploma" autofocus>
+			</div>
+
 			<label for="inputUsername" class="col-sm-2 control-label">Username</label>
 			<div class="col-sm-10 form-group">
 				<input type="text" id="inputUsername" name="username" class="form-control" placeholder="username" required autofocus>

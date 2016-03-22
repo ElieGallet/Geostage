@@ -37,7 +37,7 @@ if(isset($_POST['import'])){
 				else{
 					echo ('<div class="container">
 						<div class="alert alert-success">
-							<label>'.$count['student'].' students have been created</label>
+							<label>'.$count['students'].' students have been created</label>
 						</div>
 					</div>');
 				}

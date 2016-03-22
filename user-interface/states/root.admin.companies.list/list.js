@@ -52,7 +52,7 @@ function initTable(){
 					footerFormatter: totalNameFormatter
 				}, {
 					field: 'operate',
-					title: 'Item Operate',
+					title: '',
 					align: 'center',
 					events: operateEvents,
 					formatter: operateFormatter

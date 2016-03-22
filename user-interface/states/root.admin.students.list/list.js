@@ -44,8 +44,29 @@ function initTable(){
 					editable: false,
 					footerFormatter: totalNameFormatter
 				}, {
+					field: 'diploma',
+					title: 'Diploma',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
+					field: 'graduating_year',
+					title: 'Graduating Year',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
+					field: 'course',
+					title: 'Course',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
 					field: 'operate',
-					title: 'Item Operate',
+					title: '',
 					align: 'center',
 					events: operateEvents,
 					formatter: operateFormatter

@@ -31,18 +31,35 @@ class studentExcelFileTreatment{
 		$count = 0;
 		$columnLastName = $this->getColumnName("NOM");
 		$columnFirstName = $this->getColumnName("PRENOM");
+		$columnGraduatingYear = $this->getColumnName("PROMO");
+		$columnCourse = $this->getColumnName("PARCOURS");
+		$columnDiploma = $this->getColumnName("DIPLOME");
 
 		$worksheet = $this->objPHPExcel->getActiveSheet();
 
 		foreach($worksheet->getRowIterator() as $row){
 			$rowIndex = $row->getRowIndex();
 			if($rowIndex !== 1){
+
 				//fetching last names
 				$cellLastName = $worksheet->getCell($columnLastName.$rowIndex);
 				$lastName = $cellLastName->getCalculatedValue();
+
 				//fetching first names
 				$cellFirstName = $worksheet->getCell($columnFirstName.$rowIndex);
 				$firstName = $cellFirstName->getCalculatedValue();
+
+				//fetching graduating years
+				$cellGraduatingYear = $worksheet->getCell($columnGraduatingYear.$rowIndex);
+				$graduatingYear = $cellGraduatingYear->getCalculatedValue();
+
+				//fetching courses
+				$cellCourse = $worksheet->getCell($columnCourse.$rowIndex);
+				$course = $cellCourse->getCalculatedValue();
+
+				//fetching diplomas
+				$cellDiploma = $worksheet->getCell($columnDiploma.$rowIndex);
+				$diploma = $cellDiploma->getCalculatedValue();
 
 				$random =  substr(md5(uniqid(rand(), true)), 0, 6);
 				$username = "student".$random;
@@ -50,8 +67,8 @@ class studentExcelFileTreatment{
 					if(!$this->business->doesStudentExist($lastName, $firstName)){
 						$this->business->createUser($username,"");
 						$id = $this->business->getUserId($username);
-						echo($id. ' ' . $firstName. ' ' . $lastName);
-						$result = $this->business->createStudent($id, $firstName, $lastName);
+						echo($id. ' ' . $firstName. ' ' . $lastName . ' ' . $graduatingYear . ' ' . $course . ' ' . $diploma);
+						$result = $this->business->createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma);
 						if ($result){
 							$count = $count + 1;
 						}

@@ -72,8 +72,8 @@ class business{
 		return $this->dbconnection->createUser($username, $this->encryptPassword($password));
 	}
 
-	function createStudent($id, $firstName, $lastName){
-		return $this->dbconnection->createStudent($id, $firstName, $lastName);
+	function createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma){
+		return $this->dbconnection->createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma);
 	}
 
 	function createCompany($id, $siret, $sector, $level, $name, $description, $phone, $email, $tutor, $address, $street, $cedex, $postalCode, $city, $country, $website){

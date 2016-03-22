@@ -194,8 +194,8 @@ class dbconnection {
 		}
 	}
 
-	function createStudent($id, $firstName, $lastName){
-		$sql = "INSERT INTO student (id, first_name, last_name) VALUES ('$id', '$firstName', '$lastName')";
+	function createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma){
+		$sql = "INSERT INTO student (id, first_name, last_name, graduating_year, course, diploma) VALUES ('$id', '$firstName', '$lastName', '$graduatingYear', '$course', '$diploma')";
 
 		if ($this->bd->query($sql) == TRUE) {
 			return TRUE;
