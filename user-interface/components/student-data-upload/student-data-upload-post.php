@@ -1,43 +1,43 @@
 <?php
 $uploadedStatus = 0;
 if(isset($_POST['import'])){
-	if(isset($_FILES['pstage'])) {
-		if($_FILES['pstage']['error'] > 0) {
-			echo ('Return Code: ' . $_FILES['pstage']['error'] . '<br/>'); 
+	if(isset($_FILES['students'])) {
+		if($_FILES['students']['error'] > 0) {
+			echo ('Return Code: ' . $_FILES['students']['error'] . '<br/>'); 
 		}
 		else {
-			if(file_exists($_FILES['pstage']['name'])){
-				unlink($_FILES['pstage']['name']);
+			if(file_exists($_FILES['students']['name'])){
+				unlink($_FILES['students']['name']);
 			}
-			$storagename = 'pstage.xlsx';
-			move_uploaded_file($_FILES['pstage']['tmp_name'], $storagename); 
+			$storagename = 'students.xlsx';
+			move_uploaded_file($_FILES['students']['tmp_name'], $storagename); 
 			$uploadedStatus = 1;
 			echo ('<div class="container">
 				<div class="alert alert-success">
 					<label>File successfully uploaded</label>
 				</div>
 			</div>');
-			if (substr($_FILES['pstage']['name'],-4) == '.xls' OR substr($_FILES['pstage']['name'],-4) == '.xlsx'){
-				$business->treatPstageExcelFile();
-				$count = $business->pstageExcelFileTreatment->result;
-				if($count['company'] == 0){
+			if (substr($_FILES['students']['name'],-4) == '.xls' OR substr($_FILES['students']['name'],-4) == '.xlsx'){
+				$business->treatStudentExcelFile();
+				$count = $business->studentExcelFileTreatment->result;
+				if($count['students'] == 0){
 					echo ('<div class="container">
 						<div class="alert alert-danger">
-							<label>No company created</label>
+							<label>No student created</label>
 						</div>
 					</div>');
 				}
-				else if($count['company'] == 1){
+				else if($count['students'] == 1){
 					echo ('<div class="container">
 						<div class="alert alert-success">
-							<label>one company has been created</label>
+							<label>one student has been created</label>
 						</div>
 					</div>');
 				}
 				else{
 					echo ('<div class="container">
 						<div class="alert alert-success">
-							<label>'.$count['company'].' companies have been created</label>
+							<label>'.$count['students'].' students have been created</label>
 						</div>
 					</div>');
 				}

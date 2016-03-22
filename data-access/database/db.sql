@@ -100,8 +100,11 @@ CREATE TABLE IF NOT EXISTS `internship_offer` (
 
 CREATE TABLE IF NOT EXISTS `student` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(25) DEFAULT NULL,
-  `last_name` varchar(25) DEFAULT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(40) NOT NULL,
+  `graduating_year` varchar(40) DEFAULT NULL,
+  `course` varchar(40) DEFAULT NULL,
+  `diploma` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

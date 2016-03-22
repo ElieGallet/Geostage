@@ -44,8 +44,29 @@ function initTable(){
 					editable: false,
 					footerFormatter: totalNameFormatter
 				}, {
+					field: 'diploma',
+					title: 'Diploma',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
+					field: 'graduating_year',
+					title: 'Graduating Year',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
+					field: 'course',
+					title: 'Course',
+					sortable: true,
+					align: 'center',
+					editable: false,
+					footerFormatter: totalNameFormatter
+				}, {
 					field: 'operate',
-					title: 'Item Operate',
+					title: '',
 					align: 'center',
 					events: operateEvents,
 					formatter: operateFormatter
@@ -199,7 +220,7 @@ function getHeight() {
 
 $(function () {
 	var scripts = [
-	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js'
+	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js', '/user-interface/vendors/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.js'
 	],
 	eachSeries = function (arr, iterator, callback) {
 		callback = callback || function () {};

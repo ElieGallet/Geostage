@@ -40,7 +40,7 @@
 			</div>
 		</div>
 
-		<table id="table" data-toolbar="#toolbar" data-search="true" data-show-columns="true" data-detail-view="true" data-detail-formatter="detailFormatter" data-minimum-count-columns="2" data-height="" data-pagination="true" data-pageSize="10" data-id-field="id" data-page-list="[10, 20, 50, 100, ALL]" data-show-footer="false" data-cache="true" data-side-pagination="client" data-response-handler="responseHandler">
+		<table id="table" data-toolbar="#toolbar" data-search="true" data-show-columns="true" data-detail-view="true" data-detail-formatter="detailFormatter" data-minimum-count-columns="2" data-height="" data-pagination="true" data-pageSize="10" data-id-field="id" data-page-list="[10, 20, 50, 100, ALL]" data-show-footer="false" data-cache="true" data-side-pagination="client" data-response-handler="responseHandler" data-advanced-search="true" data-id-table="advancedTable">
 		</table>
 	</div>
 

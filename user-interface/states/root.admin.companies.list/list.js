@@ -23,13 +23,6 @@ function initTable(){
 					align: 'center',
 					valign: 'middle'
 				}, {
-					field: 'siret',
-					title: 'SIRET',
-					sortable: true,
-					editable: false,
-					footerFormatter: totalNameFormatter,
-					align: 'center'
-				}, {
 					field: 'username',
 					title: 'Username',
 					sortable: true,
@@ -59,7 +52,7 @@ function initTable(){
 					footerFormatter: totalNameFormatter
 				}, {
 					field: 'operate',
-					title: 'Item Operate',
+					title: '',
 					align: 'center',
 					events: operateEvents,
 					formatter: operateFormatter

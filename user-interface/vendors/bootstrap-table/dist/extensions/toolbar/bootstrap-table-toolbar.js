@@ -58,7 +58,7 @@
         htmlForm.push(sprintf('<form class="form-horizontal" id="%s" action="%s" >', that.options.idForm, that.options.actionForm));
         for (var i in pColumns) {
             var vObjCol = pColumns[i];
-            if (!vObjCol.checkbox && vObjCol.visible && vObjCol.searchable) {
+            if (!vObjCol.checkbox && vObjCol.visible && vObjCol.searchable && vObjCol.title) {
                 htmlForm.push('<div class="form-group">');
                 htmlForm.push(sprintf('<label class="col-sm-4 control-label">%s</label>', vObjCol.title));
                 htmlForm.push('<div class="col-sm-6">');

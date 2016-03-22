@@ -1,12 +1,11 @@
 <?php
-
 require_once($_SERVER['DOCUMENT_ROOT'] . '/data-access/database/database-connection.php');
-require_once('treatments/excel-file.php');
 
 class business{
 	
 	private $dbconnection;
-	public $excelFileTreatment;
+	public $pstageExcelFileTreatment;
+	public $studentExcelFileTreatment;
 
 	function business(){
 		$this->dbconnection = new dbconnection();
@@ -49,6 +48,10 @@ class business{
 		return $this->dbconnection->doesInternshipExist($internId, $companyId);
 	}
 
+	function doesStudentExist($lastName, $firstName){
+		return $this->dbconnection->doesStudentExist($lastName, $firstName);
+	}
+
 	function getUserType($username){
 		return $this->dbconnection->getUserType($username);
 	}
@@ -69,8 +72,8 @@ class business{
 		return $this->dbconnection->createUser($username, $this->encryptPassword($password));
 	}
 
-	function createStudent($id, $firstName, $lastName){
-		return $this->dbconnection->createStudent($id, $firstName, $lastName);
+	function createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma){
+		return $this->dbconnection->createStudent($id, $firstName, $lastName, $graduatingYear, $course, $diploma);
 	}
 
 	function createCompany($id, $siret, $sector, $level, $name, $description, $phone, $email, $tutor, $address, $street, $cedex, $postalCode, $city, $country, $website){
@@ -165,8 +168,14 @@ class business{
 		return $this->dbconnection->deleteInternshipOffer($companyId, $link);
 	}
 
-	function treatExcelFile(){
-		$this->excelFileTreatment = new excelFileTreatment();
+	function treatPstageExcelFile(){
+		require_once('treatments/pstage-excel-file.php');
+		$this->pstageExcelFileTreatment = new pstageExcelFileTreatment();
+	}
+
+	function treatStudentExcelFile(){
+		require_once('treatments/student-excel-file.php');
+		$this->studentExcelFileTreatment = new studentExcelFileTreatment();
 	}
 }
 ?>
