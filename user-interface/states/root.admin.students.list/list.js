@@ -199,7 +199,7 @@ function getHeight() {
 
 $(function () {
 	var scripts = [
-	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js'
+	location.search.substring(1) || '/user-interface/vendors/bootstrap-table/dist/bootstrap-table.js', '/user-interface/vendors/bootstrap-table/dist/extensions/toolbar/bootstrap-table-toolbar.js'
 	],
 	eachSeries = function (arr, iterator, callback) {
 		callback = callback || function () {};

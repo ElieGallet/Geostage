@@ -49,6 +49,19 @@ class dbconnection {
 		}
 	}
 
+	function doesStudentExist($lastName, $firstName){
+		$sql = "SELECT * FROM student WHERE first_name = '$firstName' AND last_name = '$lastName'";
+		$result = $this->bd->query($sql);
+		$dbarray = $result->fetch();
+
+		if(!$dbarray){
+			return FALSE;
+		}      
+		else{
+			return TRUE;
+		}
+	}
+
 	function doesCompanyExist($siret){
 		$sql = "SELECT siret FROM company WHERE siret = '$siret'";
 		$result = $this->bd->query($sql);

@@ -4,13 +4,13 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/libraries/PHPExcel.ph
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/libraries/PHPExcel/IOFactory.php');
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/business-logic/business.php');
 
-class excelFileTreatment{
+class pstageExcelFileTreatment{
 
 	private $business;
 	private $objPHPExcel;
 	public $result;
 
-	function excelFileTreatment(){
+	function pstageExcelFileTreatment(){
 		$this->business = new business();
 		$inputFileName = 'pstage.xlsx';
 		try {
@@ -19,7 +19,7 @@ class excelFileTreatment{
 		catch(Exception $e){
 			die('Error loading file "'.pathinfo($inputFileName, PATHINFO_BASENAME).'": '.$e->getMessage());
 		}
-		$this->result = $this->generateTables();	
+		$this->result = $this->generateTables();
 	}
 
 	function generateTables(){
@@ -152,7 +152,8 @@ class excelFileTreatment{
 				$website = $cellWebsite->getCalculatedValue();
 				
 				//create user and fetch its id
-				$username = "company".$rowIndex;
+				$random =  substr(md5(uniqid(rand(), true)), 0, 6);
+				$username = "company".$random;
 				$this->business->createUser($username,"");
 				$id = $this->business->getUserId($username);
 
@@ -213,8 +214,7 @@ class excelFileTreatment{
 				//fetching id from database
 				$internId = $this->business->getinternId($internFirstName, $internLastName);
 
-				if(!empty($company))
-				{
+				if(!empty($company)){
 					$companyID = $this->business->getCompanyId($company);
 					if(!$this->business->doesInternshipExist($internId, $companyID))
 					{

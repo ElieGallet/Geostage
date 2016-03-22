@@ -1,12 +1,11 @@
 <?php
-
 require_once($_SERVER['DOCUMENT_ROOT'] . '/data-access/database/database-connection.php');
-require_once('treatments/excel-file.php');
 
 class business{
 	
 	private $dbconnection;
-	public $excelFileTreatment;
+	public $pstageExcelFileTreatment;
+	public $studentExcelFileTreatment;
 
 	function business(){
 		$this->dbconnection = new dbconnection();
@@ -47,6 +46,10 @@ class business{
 
 	function doesInternshipExist($internId, $companyId){
 		return $this->dbconnection->doesInternshipExist($internId, $companyId);
+	}
+
+	function doesStudentExist($lastName, $firstName){
+		return $this->dbconnection->doesStudentExist($lastName, $firstName);
 	}
 
 	function getUserType($username){
@@ -165,8 +168,14 @@ class business{
 		return $this->dbconnection->deleteInternshipOffer($companyId, $link);
 	}
 
-	function treatExcelFile(){
-		$this->excelFileTreatment = new excelFileTreatment();
+	function treatPstageExcelFile(){
+		require_once('treatments/pstage-excel-file.php');
+		$this->pstageExcelFileTreatment = new pstageExcelFileTreatment();
+	}
+
+	function treatStudentExcelFile(){
+		require_once('treatments/student-excel-file.php');
+		$this->studentExcelFileTreatment = new studentExcelFileTreatment();
 	}
 }
 ?>

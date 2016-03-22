@@ -12,6 +12,7 @@
 
 	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/states/root.admin.students/students.php');?>
 	<?php require('create-post.php');?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . '/user-interface/components/student-data-upload/student-data-upload.php');?>
 
 	<div class="container">
 		<div class="well well-sm"><label>Create a student</label></div>
